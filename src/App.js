@@ -11,12 +11,6 @@ function App() {
       setRepositories(response.data)
     })
   }, [])
-
-  useEffect(() => {
-    api.get('repositories').then(response => {
-      setRepositories(response.data)
-    })
-  }, [handleRemoveRepository])
   
   async function handleAddRepository() {                                                    // OK
     const response = await api.post('repositories', {
@@ -29,9 +23,13 @@ function App() {
 
     setRepositories([...repositories, repository])
   }
-
+  
   async function handleRemoveRepository(id) {
-    await api.delete(`repositories/${id}`)
+    const response = await api.delete(`repositories/${id}`)
+
+    if (response.status == 204) {
+      setRepositories(repositories.filter(repository => repository.id !== id))
+    }
   }
 
   return (
