@@ -2,17 +2,17 @@
 
 ## Overview 
   This repository was made to submit a challenge for [Rocketseat](https://rocketseat.com.br/) goStack bootcamp.
-  In this challenge, I was asked to reinforce my REST API concepts, creating essential API routes as demanded on the challenge to-dos.
+  In this challenge, I was asked to developt a simple frontend with an backend connection. 
 
   To run the app, simply insert below command. 
   *Note*: You must install code dependencies before running dev command.(exemple below)
+  *Note 2*: I haven't uploaded the Backend API here, but you can clone it [here](https://github.com/regisfaria/gostack-secondChallenge);
   ``` shell
   $ yarn
   $ yarn dev
   ```
 
-  The api is listening on localhost:3333. 
-  To test API requisitions I recommennd using [Insomnia](https://insomnia.rest/).
+  Frontend app is running on http://localhost:8080 
 
 ## Contact
 Email: regisprogramming@gmail.com
